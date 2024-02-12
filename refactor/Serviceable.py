@@ -1,7 +1,7 @@
-from refactor.Car import Car
+from abc import ABC, abstractmethod
 
 
-class Serviceable(Car):
-
+class Serviceable(ABC):
+    @abstractmethod
     def needs_service(self):
-        return self.engine.needs_service(), self.battery.needs_service()
+        pass
